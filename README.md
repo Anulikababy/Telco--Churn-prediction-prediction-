@@ -1,23 +1,13 @@
-# Project 1: Customer Churn Prediction
+# Customer Churn Prediction
 
-Predict whether a telecom customer may leave or stay using tenure, contract type and monthly charges.
+This project predicts whether a telecommunications customer is likely to leave or stay based on customer tenure, contract type, and monthly charges. It compares Logistic Regression and Random Forest models using recall and accuracy, saves the trained models for fast inference, and serves predictions through an interactive Streamlit app.
 
 ## Dataset
-Public Telco Customer Churn CSV. The app downloads the data, converts `TotalCharges` to numeric and removes invalid entries.
+Telco Customer Churn dataset (7,043 rows and 21 columns).
 
-## Models
-- Logistic Regression (primary prediction model)
-- Random Forest (model comparison)
-
-## Metrics
-Accuracy, precision, recall for the churn class, and confusion matrix, calculated on a held-out test set.
-
-## Run
-Install dependencies: `pip install -r requirements.txt`
-Run the app: `streamlit run app.py`
-
-## Features in the app
-Tenure (months), contract type, monthly charges. The app displays the estimated churn probability.
-
-## Tools
-Python, Pandas, Scikit-learn, Streamlit, GitHub, Streamlit Community Cloud.
+## Repository Contents
+- `streamlit_app.py`: Streamlit web application loading saved `.pkl` models.
+- `train_churn.py`: Training script for Logistic Regression and Random Forest models.
+- `logistic_churn_model.pkl`, `forest_churn_model.pkl`, `eval_results.pkl`: Saved models and evaluation metrics.
+- `requirements.txt`: Python package dependencies.
+- `README.md`: Project overview and instructions.
